@@ -1,0 +1,78 @@
+<!--
+ Created by zh on 2016/3/15.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function goLogin()
+        {
+            var user_name = document.getElementById('name').value;
+            var user_pass = document.getElementById('pass').value;
+
+            console.log(user_name);
+            console.log(user_pass);
+            //账号或密码为空
+            if(user_name == "" || user_pass == "" || user_name == null || user_pass == null){
+                alert("账号或密码不能为空");
+                return ;
+            }
+
+            //账号长度不符合
+            if(user_name.length <6 || user_name.length > 12)
+                    alert("账号长度不符合(长度合法区间6~12)");
+
+            //密码长度不符合
+            if(user_pass.length <6 || user_pass.length > 12)
+                    alert("密码长度不符合(长度合法区间6~12)");
+
+            //账号包含非字母或数字或下划线
+            for(var i = 0 ; i < user_name.length ; i ++){
+                var ch = user_name[i];
+                if((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z') || (ch >= '0' && ch <= '9') || ch == '_')
+                        continue;
+                else
+                    alert("账号包含非法字符(仅支持字母、数字、下划线)");
+            }
+            //密码包含非字母或非的数字
+            for(var i = 0 ; i < user_pass.length ; i ++){
+                var ch = user_pass[i];
+                if((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z') || (ch >= '0' && ch <= '9') || ch == '_')
+                        continue;
+                else
+                    alert("密码包含非法字符(仅支持字母、数字、下划线)");
+            }
+
+            //提交表单
+
+            document.getElementById('myForm').setAttribute('action', '/confirm_user');
+            document.getElementById('myForm').setAttribute('method', 'post');
+            document.getElementById('myForm').submit();
+
+        }
+
+        function goRegister()
+        {
+            document.getElementById('myForm').setAttribute('action', '/register_page');
+            document.getElementById('myForm').setAttribute('method', 'post');
+            document.getElementById('myForm').submit();
+        }
+
+
+    </script>
+
+</head>
+<body>
+    <div style="text-align: center">
+        <h2>网络传输Demo</h2>
+        <form id="myForm">
+            <label>账号</label><input id="name" type="text" name="user_name"/>
+            <br/>
+            <label>密码</label><input id="pass" type="text" name="user_pass"/>
+        </form>
+        <button onclick="goLogin()">登录</button>&nbsp;&nbsp;<button onclick="goRegister()">注册</button>
+    </div>
+</body>
+</html>

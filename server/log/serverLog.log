@@ -1,0 +1,19 @@
+[2016-03-15 11:03:36,852](INFO)registerHandler : 进入registerHandler
+[2016-03-15 11:03:36,852](INFO)registerHandler : {u'user_name': u'nicaicaikan', u'user_pass': u'123456'}
+[2016-03-15 11:03:36,854](INFO)registerHandler : 退出registerHandler
+[2016-03-15 11:03:36,854](INFO)SQL : 进入confirm_user方法
+[2016-03-15 11:03:36,875](INFO)SQL : ()
+[2016-03-15 11:03:36,875](INFO)SQL : 退出confirm_user方法
+[2016-03-15 11:03:36,875](INFO)SQL : 进入register_user方法
+[2016-03-15 11:03:37,221](INFO)SQL : 退出register_user方法
+[2016-03-15 11:04:00,684](INFO)registerHandler : 进入registerHandler
+[2016-03-15 11:04:00,684](INFO)registerHandler : {u'user_name': u'zhanghe', u'user_pass': u'123456'}
+[2016-03-15 11:04:00,686](INFO)registerHandler : 退出registerHandler
+[2016-03-15 11:04:00,686](INFO)SQL : 进入confirm_user方法
+[2016-03-15 11:04:00,690](INFO)SQL : ((u'zhanghe', u'123456'),)
+[2016-03-15 11:04:00,690](INFO)SQL : 退出confirm_user方法
+[2016-03-15 11:04:17,812](INFO)confirmHandler : 进入confirmHandler
+[2016-03-15 11:04:17,812](INFO)confirmHandler : 进入confirmHandler
+[2016-03-15 11:04:17,812](INFO)SQL : 进入confirm_user方法
+[2016-03-15 11:04:17,819](INFO)SQL : ((u'nicaicaikan', u'123456'),)
+[2016-03-15 11:04:17,819](INFO)SQL : 退出confirm_user方法
